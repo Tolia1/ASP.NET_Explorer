@@ -1,0 +1,23 @@
+﻿@model List<ExplorerMVC.Models.Folder>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var folder in Model)
+        {
+            <tr>
+                <td><a href="/Home/ViewFolder/@folder.Id">@folder.Name</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>
